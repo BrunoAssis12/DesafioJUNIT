@@ -52,9 +52,26 @@ public class JulgamentoPrisioneiroTest {
 			
 	}
 
+	@Test
+	public void testCenario2() {
+		Resposta respSuspeitoA = Resposta.DELACAO;
+		Resposta respSuspeitoB = Resposta.DELACAO;
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		assertNotNull(jp);
+		
+		int penaSuspeitoA = jp.calculaPena(respSuspeitoA, respSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respSuspeitoB, respSuspeitoA);
+		
+		assertEquals(10, penaSuspeitoA);
+		assertEquals(15, penaSuspeitoB);
+		
+	}
+
+
 }
 
-Observações: Teste de Cenario um execução com sucesso (PENA_CONDENACAO_MUTUA = Prisioneiro A & B).
+Observações: Testes de outro Cenarios em execução com erro (penaSuspeitoA!=15 && penaSuspeitoB==15).
 
 Rm: 80639   
 Nome: Bruno Assis
