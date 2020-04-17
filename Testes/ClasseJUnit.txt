@@ -29,24 +29,23 @@ public enum Resposta{
 
 package prisioneiros;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-
-import prisioneiros.JulgamentoPrisioneiro.Resposta;
 
 public class JulgamentoPrisioneiroTest {
 
 	@Test
 	public void testCenario1() {
-		Resposta respostaSuspeitoA = Resposta.DELACAO;
-		Resposta respostaSuspeitoB = Resposta.DELACAO;
-			
-		JulgamentoPrisioneiroTest dp = new JulgamentoPrisioneiroTest();		
-		assertNotNull(dp);
-			
-		int penaSuspeitoA = dp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
-		int penaSuspeitoB = dp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
+		Resposta respSuspeitoA = Resposta.DELACAO;
+		Resposta respSuspeitoB = Resposta.DELACAO;
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		assertNotNull(jp);
+		
+		int penaSuspeitoA = jp.calculaPena(respSuspeitoA, respSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respSuspeitoB, respSuspeitoA);
 		
 		assertEquals(5, penaSuspeitoA);
 		assertEquals(5, penaSuspeitoB);
@@ -55,7 +54,7 @@ public class JulgamentoPrisioneiroTest {
 
 }
 
-Observações: Modificação da classe Resposta.java para armaenzar os dados do Enum e importação no Test  
+Observações: Modificação da classe Test com as suas respectivas variaveis  
 
 Rm: 80639   
 Nome: Bruno Assis
