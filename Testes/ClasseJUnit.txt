@@ -47,14 +47,14 @@ public class JulgamentoPrisioneiroTest {
 		int penaSuspeitoA = jp.calculaPena(respSuspeitoA, respSuspeitoB);
 		int penaSuspeitoB = jp.calculaPena(respSuspeitoB, respSuspeitoA);
 		
-		assertEquals(5, penaSuspeitoA);
-		assertEquals(5, penaSuspeitoB);
+		assertEquals(15, penaSuspeitoA);
+		assertEquals(15, penaSuspeitoB);
 			
 	}
 
 }
 
-Observações: Modificação da classe Test com as suas respectivas variaveis  
+Observações: Teste de Cenario um execução com sucesso (PENA_CONDENACAO_MUTUA = Prisioneiro A & B).
 
 Rm: 80639   
 Nome: Bruno Assis
